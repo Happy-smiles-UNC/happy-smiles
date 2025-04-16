@@ -28,7 +28,7 @@
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; 2023 Happy Smiles. All rights reserved.</p>
+      <p>&copy; 2025 Happy Smiles. All rights reserved.</p>
     </div>
   </footer>
 </template>
