@@ -5,17 +5,28 @@
       <h1 class="app-name">Happy Smiles</h1>
     </div>
     <nav class="nav-menu">
-      <a href="#" class="nav-link active">Home</a>
-      <a href="#" class="nav-link">Statistics</a>
-      <a href="#" class="nav-link">Tips</a>
-      <a href="#" class="nav-link">About</a>
+      <a href="#" @click.prevent="navigateTo('home')" :class="{ 'nav-link': true, 'active': currentPage === 'home' }">Home</a>
+      <a href="#" @click.prevent="navigateTo('clinics')" :class="{ 'nav-link': true, 'active': currentPage === 'clinics' }">Find Clinics</a>
+      <a href="#" @click.prevent="navigateTo('tips')" :class="{ 'nav-link': true, 'active': currentPage === 'tips' }">Tips</a>
+      <a href="#" @click.prevent="navigateTo('about')" :class="{ 'nav-link': true, 'active': currentPage === 'about' }">About</a>
     </nav>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  data() {
+    return {
+      currentPage: 'home'
+    }
+  },
+  methods: {
+    navigateTo(page) {
+      this.currentPage = page;
+      this.$emit('navigate', page);
+    }
+  }
 }
 </script>
 
