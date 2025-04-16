@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Smiles - SMART Launch</title>
+  <script src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.js"></script>
+</head>
+<body>
+  <div id="loading">
+    <h1>Launching Happy Smiles Dental Tracker...</h1>
+    <p>Connecting to the FHIR server...</p>
+  </div>
+
+  <script>
+    // Perform the SMART on FHIR launch sequence
+    FHIR.oauth2.authorize({
+      clientId: 'happy_smiles_app',
+      scope: 'launch/patient patient/*.read openid profile',
+      redirectUri: window.location.origin + '/index.html',
+      completeInTarget: true
+    });
+  </script>
+</body>
+</html> 

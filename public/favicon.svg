@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- Background -->
+  <rect width="16" height="16" rx="3" fill="#42b983"/>
+  
+  <!-- Tooth shape -->
+  <path d="M8,3 C10,3 12,4 12,7 C12,9.5 11,13 9.5,13 C9,13 8.5,12 8,12 C7.5,12 7,13 6.5,13 C5,13 4,9.5 4,7 C4,4 6,3 8,3 Z" fill="white"/>
+  
+  <!-- Smile -->
+  <path d="M6,8.5 Q8,10 10,8.5" fill="none" stroke="white" stroke-width="0.75" stroke-linecap="round"/>
+</svg> 
