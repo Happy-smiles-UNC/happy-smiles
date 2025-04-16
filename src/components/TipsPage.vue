@@ -2,23 +2,17 @@
   <div class="tips-page">
     <h2>Dental Health Tips</h2>
     <p class="placeholder-text">
-  <strong>How to Use a Manual Toothbrush</strong><br><br>
-  
-  <strong>Proper Angle:</strong><br>
-  Hold your toothbrush at a 45-degree angle to your gumline. This position helps remove plaque effectively while being gentle on your gums.<br><br>
-  
-  <strong>Brushing Technique:</strong><br>
-  Use gentle, circular motions or short back-and-forth strokes. Be sure to brush all surfaces of each tooth: outer (cheek side), inner (tongue side), and chewing surfaces.<br><br>
-  
-  <strong>Time Allocation:</strong><br>
-  Split your mouth into four sections: upper left, upper right, lower left, and lower right. Brush each quadrant for at least 30 seconds. Total brushing time should be 2 minutes.<br><br>
-  
-  <strong>Frequency of Brushing:</strong><br>
-  Brush your teeth at least twice a day—preferably in the morning and before bedtime—to maintain good oral hygiene.<br><br>
-  
-  <strong>Toothbrush Maintenance:</strong><br>
-  Replace your toothbrush every 3 months, or sooner if the bristles are worn or frayed. A fresh toothbrush ensures effective cleaning and protects your oral health.
+
+  • <strong>Flossing:</strong> Floss at least once a day to remove plaque from between teeth.<br>
+  • <strong>Dental Visits:</strong> Visit the dentist regularly for check-ups and professional cleanings.<br>
+  • <strong>Fluoride:</strong> Use fluoride toothpaste and consider fluoridated tap water to strengthen teeth.<br>
+  • <strong>Healthy Eating:</strong> Limit sugary snacks and drinks, and focus on a balanced diet.<br>
+  • <strong>Smoking:</strong> Quit smoking to reduce the risk of gum disease and other oral health problems.<br>
+  • <strong>Mouthguards:</strong> Wear a mouthguard during sports or activities where you might be at risk for injury.<br>
+  • <strong>Pregnant Women:</strong> Pregnant women should continue good oral hygiene practices and see their dentist regularly.<br>
+  • <strong>Children:</strong> Start brushing and flossing as soon as teeth appear, and visit a dentist by the age of one.
 </p>
+
 
   </div>
 </template>
