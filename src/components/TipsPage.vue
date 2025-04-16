@@ -4,13 +4,21 @@
     <p class="placeholder-text">
 
   • <strong>Flossing:</strong> Floss at least once a day to remove plaque from between teeth.<br>
+      
   • <strong>Dental Visits:</strong> Visit the dentist regularly for check-ups and professional cleanings.<br>
+      
   • <strong>Fluoride:</strong> Use fluoride toothpaste and consider fluoridated tap water to strengthen teeth.<br>
+      
   • <strong>Healthy Eating:</strong> Limit sugary snacks and drinks, and focus on a balanced diet.<br>
+      
   • <strong>Smoking:</strong> Quit smoking to reduce the risk of gum disease and other oral health problems.<br>
+      
   • <strong>Mouthguards:</strong> Wear a mouthguard during sports or activities where you might be at risk for injury.<br>
+      
   • <strong>Pregnant Women:</strong> Pregnant women should continue good oral hygiene practices and see their dentist regularly.<br>
+      
   • <strong>Children:</strong> Start brushing and flossing as soon as teeth appear, and visit a dentist by the age of one.
+      
 </p>
 
 
