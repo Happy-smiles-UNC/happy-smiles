@@ -4,6 +4,9 @@ import DentalTracker from './components/DentalTracker.vue'
 import DentalClinicMap from './components/DentalClinicMap.vue'
 import TipsPage from './components/TipsPage.vue'
 import AboutPage from './components/AboutPage.vue'
+import BrushingTechniques from './components/BrushingTechniques.vue'
+import FlossingGuide from './components/FlossingGuide.vue'
+import DentalFAQ from './components/DentalFAQ.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 
@@ -23,9 +26,12 @@ function handleNavigation(page) {
       <DentalClinicMap v-if="currentPage === 'clinics'" />
       <TipsPage v-if="currentPage === 'tips'" />
       <AboutPage v-if="currentPage === 'about'" />
+      <BrushingTechniques v-if="currentPage === 'brushing'" />
+      <FlossingGuide v-if="currentPage === 'flossing'" />
+      <DentalFAQ v-if="currentPage === 'faq'" />
     </main>
     
-    <AppFooter />
+    <AppFooter @navigate="handleNavigation" />
   </div>
 </template>
 

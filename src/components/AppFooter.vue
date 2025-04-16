@@ -9,20 +9,20 @@
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Statistics</a></li>
-          <li><a href="#">Dental Tips</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#" @click.prevent="navigateTo('home')">Home</a></li>
+          <li><a href="#" @click.prevent="navigateTo('clinics')">Find Clinics</a></li>
+          <li><a href="#" @click.prevent="navigateTo('tips')">Dental Tips</a></li>
+          <li><a href="#" @click.prevent="navigateTo('about')">About Us</a></li>
         </ul>
       </div>
       
       <div class="footer-section">
         <h3>Resources</h3>
         <ul class="footer-links">
-          <li><a href="#">Brushing Techniques</a></li>
-          <li><a href="#">Flossing Guide</a></li>
-          <li><a href="#">Dental FAQ</a></li>
-          <li><a href="#">Find a Dentist</a></li>
+          <li><a href="#" @click.prevent="navigateTo('brushing')">Brushing Techniques</a></li>
+          <li><a href="#" @click.prevent="navigateTo('flossing')">Flossing Guide</a></li>
+          <li><a href="#" @click.prevent="navigateTo('faq')">Dental FAQ</a></li>
+          <li><a href="#" @click.prevent="navigateTo('clinics')">Find a Dentist</a></li>
         </ul>
       </div>
     </div>
@@ -35,7 +35,12 @@
 
 <script>
 export default {
-  name: 'AppFooter'
+  name: 'AppFooter',
+  methods: {
+    navigateTo(page) {
+      this.$emit('navigate', page);
+    }
+  }
 }
 </script>
 
