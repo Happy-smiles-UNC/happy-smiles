@@ -30,7 +30,7 @@ Toothbrush Maintenance: Replace the electric toothbrush head every 3 months, or 
       
  Regular vs. Electric Toothbrush
 
-1. Plaque Removal: Electric toothbrushes can remove more plaque than regular ones, largely due to their advanced brushing technology and consistent head movements. 
+1. Plaque Removal: Electric toothbrushes can remove more plaque than regular ones, largely due to their advanced brushing technology and consistent head movements. Built-in timers- A timer built into an electric toothbrush can help you brush your teeth long enough to sufficiently remove plaque from your teeth and gums. 
       
 2. Ease of Use: Electric toothbrushes are generally easier to use as they require less manual effort. The motorized head does much of the work. 
       
@@ -40,6 +40,12 @@ Toothbrush Maintenance: Replace the electric toothbrush head every 3 months, or 
       
 5. Consistent Performance: The consistent movement of the electric toothbrush head provides a uniform cleaning experience, which helps in effectively cleaning teeth and gums.
 
+6. Safe for gums
+
+7. Improves oral health in people with orthodontic appliances
+      
+8. Easier for people with limited mobility- They may be helpful for anyone with limited mobility, such as people with: carpal tunnel, arthritis, developmental disabilities
+      
       
 How To Brush Your Tongue?
       
