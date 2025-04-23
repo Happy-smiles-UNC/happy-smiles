@@ -1,9 +1,6 @@
 <template>
   <div class="about-page">
     <h2>About Happy Smiles</h2>
-<template>
-  <div class="about-page">
-    <h2>About Happy Smiles</h2>
 
     <section class="about-section">
       <p>
@@ -12,7 +9,7 @@
 
       <h3>Why We Exist</h3>
       <p>
-        Many people don’t receive proper oral health education early on, leading to preventable issues like cavities and gum disease. We’re here to change that. Through interactive tools, tracking, and simple tips, we help users—especially children—understand and enjoy dental care.
+        Many people don't receive proper oral health education early on, leading to preventable issues like cavities and gum disease. We're here to change that. Through interactive tools, tracking, and simple tips, we help users—especially children—understand and enjoy dental care.
       </p>
 
       <h3>What We Offer</h3>
@@ -24,7 +21,7 @@
       </ul>
 
       <p>
-        Whether you’re a parent, a child, or just someone looking to improve your oral hygiene, Happy Smiles is here to support your journey. Together, we can make every smile a confident and healthy one.
+        Whether you're a parent, a child, or just someone looking to improve your oral hygiene, Happy Smiles is here to support your journey. Together, we can make every smile a confident and healthy one.
       </p>
     </section>
   </div>
@@ -66,36 +63,5 @@ h2 {
   margin-left: 1.5rem;
   list-style-type: disc;
   padding-left: 1rem;
-}
-</style>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'AboutPage'
-}
-</script>
-
-<style scoped>
-.about-page {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  color: #42b983;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.placeholder-text {
-  text-align: center;
-  padding: 2rem;
-  color: #666;
-  font-style: italic;
 }
 </style> 
