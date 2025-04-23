@@ -64,18 +64,18 @@
 
 
 <script>
-import brushingImage from '@/assets/brushing_technique.png';
-import tongueImage from '@/assets/tongue_cleaning.jpg';
-import toothbrushImage from '@/assets/manual-toothbrush-vs-electric-toothbrush.jpg';
-import flossImage from '@/assets/floss.jpg';
-import flossingImage from '@/assets/flossing_technique.jpg';
-import flosstypeImage from '@/assets/floss_types.jpg';
-import step1Image from '@/assets/step_1.jpeg';
-import step2Image from '@/assets/step_2.jpg';
-import step3Image from '@/assets/step_3.jpg';
-import step4Image from '@/assets/step_4.jpg';
-import step5Image from '@/assets/step_5.jpg';
-import step6Image from '@/assets/step_6.jpg';
+import brushingImage from '@/assets/Images/brushing_technique.png';
+import tongueImage from '@/assets/Images/tongue_cleaning.jpg';
+import toothbrushImage from '@/assets/Images/manual-toothbrush-vs-electric-toothbrush.jpg';
+import flossImage from '@/assets/Images/floss.jpg';
+import flossingImage from '@/assets/Images/flossing_technique.jpg';
+import flosstypeImage from '@/assets/Images/floss_types.jpg';
+import step1Image from '@/assets/Images/step_1.jpeg';
+import step2Image from '@/assets/Images/step_2.jpg';
+import step3Image from '@/assets/Images/step_3.jpg';
+import step4Image from '@/assets/Images/step_4.jpg';
+import step5Image from '@/assets/Images/step_5.jpg';
+import step6Image from '@/assets/Images/step_6.jpg';
   
 export default {
   name: 'BrushingTechniques',
