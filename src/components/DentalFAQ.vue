@@ -1,24 +1,30 @@
 <template>
   <div class="dental-faq">
     <h2>Dental Frequently Asked Questions</h2>
-    <p class="placeholder-text">
-      
-1. How long and how often should I brush my teeth?
-Brush your teeth twice a day for two minutes each time. Set a stopwatch or timer to make sure you're giving your teeth enough attention.
-
-2. What type of toothbrush should I use?
-The American Dental Association (ADA) recommends a soft-bristled brush for removing plaque and food debris. A toothbrush with a small head can better reach all areas of the mouth. An electric toothbrush is a good option for those with difficulty brushing or limited manual dexterity.
-      
-3. What toothpaste should I use? 
-From fighting cavities and whitening teeth to improving sensitivity, different toothpaste types are available depending on your particular needs. Having trouble deciding? Talk to your dentist or dental hygienist about which toothpaste is right for you.
-
-4. Can I over brush my teeth?
-You can overbrush, so make sure you are using a gentle touch when wielding your toothbrush. Overly vigorous brushing can lead to abrasion, gum recession, and sensitivity.
-
-5. How often should I replace my toothbrush? 
-Replace your toothbrush when it begins to show wear or every three to four months, whichever comes first. Change your toothbrush after any illness to help avoid reinfection.
-
-    </p>
+    <div class="faq-list">
+      <ol>
+        <li>
+          <strong>How long and how often should I brush my teeth?</strong><br />
+          Brush your teeth twice a day for two minutes each time. Set a stopwatch or timer to make sure you're giving your teeth enough attention.
+        </li>
+        <li>
+          <strong>What type of toothbrush should I use?</strong><br />
+          The American Dental Association (ADA) recommends a soft-bristled brush for removing plaque and food debris. A toothbrush with a small head can better reach all areas of the mouth. An electric toothbrush is a good option for those with difficulty brushing or limited manual dexterity.
+        </li>
+        <li>
+          <strong>What toothpaste should I use?</strong><br />
+          From fighting cavities and whitening teeth to improving sensitivity, different toothpaste types are available depending on your particular needs. Having trouble deciding? Talk to your dentist or dental hygienist about which toothpaste is right for you.
+        </li>
+        <li>
+          <strong>Can I over brush my teeth?</strong><br />
+          You can overbrush, so make sure you are using a gentle touch when wielding your toothbrush. Overly vigorous brushing can lead to abrasion, gum recession, and sensitivity.
+        </li>
+        <li>
+          <strong>How often should I replace my toothbrush?</strong><br />
+          Replace your toothbrush when it begins to show wear or every three to four months, whichever comes first. Change your toothbrush after any illness to help avoid reinfection.
+        </li>
+      </ol>
+    </div>
   </div>
 </template>
 
