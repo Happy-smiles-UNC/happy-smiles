@@ -7,7 +7,7 @@
       <img :src="images.brushing" alt="Modified Bass Technique" />
     </div>
 
-    <h4>How To Use a Manual Toothbrush?</h4>
+    <h3>How To Use a Manual Toothbrush?</h3>
     <p><strong>Proper Angle:</strong> Aim the bristles at a 45-degree angle towards the gumline. This angle helps effectively remove plaque without causing irritation to your gums.</p>
 
     <h4>Brushing Technique:</h4>
@@ -27,14 +27,14 @@
     <h4>Toothbrush Maintenance:</h4>
     <p>Replace your toothbrush or toothbrush head every 3 months, or sooner if the bristles become frayed. Regular replacement ensures your brush is effective in cleaning your teeth and maintaining oral health.</p>
 
-    <h4>How To Use An Electric Toothbrush?</h4>
+    <h5>How To Use An Electric Toothbrush?</h5>
     <p><strong>Proper Positioning:</strong> Position the bristles at a 45-degree angle to the gums to enhance cleaning along the gumline.</p>
     <p><strong>Brushing Technique:</strong> Hold the brush head against each tooth individually and allow the toothbrush to rotate and vibrate; avoid scrubbing.</p>
     <p><strong>Time Allocation:</strong> Divide the mouth into four quadrants: upper left, upper right, lower left, and lower right. Spend 30 seconds on each quadrant for a total brushing time of 2 minutes.</p>
     <p><strong>Frequency of Brushing:</strong> Brush twice daily, preferably in the morning and before bedtime, to maintain optimal oral hygiene.</p>
     <p><strong>Toothbrush Maintenance:</strong> Replace the electric toothbrush head every 3 months, or sooner if the bristles show signs of wear.</p>
 
-    <h4>Regular vs. Electric Toothbrush</h4>
+    <h6>Regular vs. Electric Toothbrush</h6>
     <ol>
       <li><strong>Plaque Removal:</strong> Electric toothbrushes can remove more plaque than regular ones, largely due to their advanced brushing technology and consistent head movements.</li>
       <li><strong>Ease of Use:</strong> Electric toothbrushes are generally easier to use as they require less manual effort.</li>
@@ -50,7 +50,7 @@
       <img :src="images.toothbrush" alt="Manual vs Electric Toothbrush" />
     </div>
 
-    <h4>How To Brush Your Tongue?</h4>
+    <h7>How To Brush Your Tongue?</h7>
     <p><strong>Importance of Brushing the Tongue:</strong> Regular tongue cleaning removes bacteria, prevents bad breath, and enhances taste.</p>
     <p><strong>Using a Toothbrush:</strong> Gently brush your tongue from back to front using your regular brush or one with a tongue cleaner.</p>
     <p><strong>Using a Tongue Scraper:</strong> Gently scrape from the back of the tongue forward, rinsing between strokes.</p>
@@ -133,19 +133,24 @@ export default {
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 
 h2 {
   color: #42b983;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.placeholder-text {
-  text-align: center;
-  padding: 2rem;
-  color: #666;
-  font-style: italic;
+h3, h5, h7 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+h4, h6 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 .brushing-steps-grid {
@@ -179,5 +184,9 @@ h2 {
   font-size: 1rem;
   color: #444;
 }
+
+.bass-technique-img {
+  width: 80%;
+  height: auto;
 
 </style> 
