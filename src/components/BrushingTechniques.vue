@@ -188,5 +188,6 @@ h4, h6 {
 .bass-technique-img {
   width: 80%;
   height: auto;
+}
 
 </style> 
