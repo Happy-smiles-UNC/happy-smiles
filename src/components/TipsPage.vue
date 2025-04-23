@@ -1,29 +1,26 @@
 <template>
-  <div class="tips-page">
-    <h2>Dental Health Tips</h2>
-    <p class="placeholder-text">
+  <div class="tips-container">
+    <h2>🪥 Dental Health Tips</h2>
+    
+    <ul class="tips-list">
+      <li>🦷 <strong>Floss daily:</strong> Clean between your teeth once a day to prevent plaque buildup.</li>
+      <li>🪥 <strong>Dental Visits:</strong> See your dentist every 6 months for a checkup and cleaning.</li>
+      <li>🧴 <strong>Use Fluoride Toothpaste:</strong> Strengthens enamel and prevents cavities.</li>
+      <li>🥗 <strong>Eat Healthy:</strong> Limit sugary snacks and eat more fruits and veggies.</li>
+      <li>🚭 <strong>Quit Smoking:</strong> It causes gum disease and stains your teeth.</li>
+      <li>😬 <strong>Use a Mouthguard:</strong> Especially if you play sports!</li>
+      <li>🤰 <strong>Pregnant?</strong> Keep brushing and visit your dentist.</li>
+      <li>👶 <strong>Start Early:</strong> Begin brushing when the first tooth appears.</li>
+    </ul>
 
-  • <strong>Flossing:</strong> Floss at least once a day to remove plaque from between teeth.<br>
-      
-  • <strong>Dental Visits:</strong> Visit the dentist regularly for check-ups and professional cleanings.<br>
-      
-  • <strong>Fluoride:</strong> Use fluoride toothpaste and consider fluoridated tap water to strengthen teeth.<br>
-      
-  • <strong>Healthy Eating:</strong> Limit sugary snacks and drinks, and focus on a balanced diet.<br>
-      
-  • <strong>Smoking:</strong> Quit smoking to reduce the risk of gum disease and other oral health problems.<br>
-      
-  • <strong>Mouthguards:</strong> Wear a mouthguard during sports or activities where you might be at risk for injury.<br>
-      
-  • <strong>Pregnant Women:</strong> Pregnant women should continue good oral hygiene practices and see their dentist regularly.<br>
-      
-  • <strong>Children:</strong> Start brushing and flossing as soon as teeth appear, and visit a dentist by the age of one.
-      
-</p>
-
-
+    <div class="cta-box">
+      <h3>✨ Ready to build better brushing habits?</h3>
+      <p>Track your daily dental care with our smile tracker!</p>
+      <a href="/tracker" class="cta-button">Open Tracker</a>
+    </div>
   </div>
 </template>
+
 
 <script>
 export default {
