@@ -64,47 +64,60 @@
 
 
 <script>
+import brushingImage from '@/assets/brushing_technique.png';
+import tongueImage from '@/assets/tongue_cleaning.jpg';
+import toothbrushImage from '@/assets/manual-toothbrush-vs-electric-toothbrush.jpg';
+import flossImage from '@/assets/floss.jpg';
+import flossingImage from '@/assets/flossing_technique.jpg';
+import flosstypeImage from '@/assets/floss_types.jpg';
+import step1Image from '@/assets/step_1.jpeg';
+import step2Image from '@/assets/step_2.jpg';
+import step3Image from '@/assets/step_3.jpg';
+import step4Image from '@/assets/step_4.jpg';
+import step5Image from '@/assets/step_5.jpg';
+import step6Image from '@/assets/step_6.jpg';
+  
 export default {
   name: 'BrushingTechniques',
   data() {
     return {
       images: {
-        brushing: require('@/assets/brushing_technique.png'),
-        tongue: require('@/assets/tongue_cleaning.jpg'),
-        toothbrush: require('@/assets/manual-toothbrush-vs-electric-toothbrush.jpg'),
-        floss: require('@/assets/floss.jpg'),
-        flossing: require('@/assets/flossing_technique.jpg'),
-        flosstype: require('@/assets/floss_types.jpg'),
+        brushing: brushingImage,
+        tongue: tongueImage,
+        toothbrush: toothbrushImage,
+        floss: flossImage,
+        flossing: flossingImage,
+        flosstype: flosstypeImage,
       },
       brushingSteps: [
         {
           id: 1,
-          img: require('@/assets/step_1.jpeg'),
+          img: step1Image,
           text: 'Place the brush at a 45° angle, brushing against the gumline to remove trapped plaque or food debris.'
         },
         {
           id: 2,
-          img: require('@/assets/step_2.jpg'),
+          img: step2Image,
           text: 'Use gentle, circular motions across the front of your teeth.'
         },
         {
           id: 3,
-          img: require('@/assets/step_3.jpg'),
+          img: step3Image,
           text: 'Brush the outer, inner, and chewing surfaces of each tooth.'
         },
         {
           id: 4,
-          img: require('@/assets/step_4.jpg'),
+          img: step4Image,
           text: 'Use the tip of the brush for the inner front teeth with an up-and-down stroke.'
         },
         {
           id: 5,
-          img: require('@/assets/step_5.jpg'),
+          img: step5Image,
           text: 'Brush your tongue to remove bacteria and keep breath fresh.'
         },
         {
           id: 6,
-          img: require('@/assets/step_6.jpg'),
+          img: step6Image,
           text: 'Brush for at least two minutes, twice a day.'
         }
       ]
