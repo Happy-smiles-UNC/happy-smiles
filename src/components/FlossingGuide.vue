@@ -2,7 +2,6 @@
   <div class="flossing-guide">
     <h2>Flossing Guide</h2>
     <p class="placeholder-text"> 
-<strong>What type of floss should I use?</strong>
       <strong>What type of floss should I use?</strong>
       There are two types of floss from which to choose:
       <ol>
@@ -11,16 +10,16 @@
       </ol>
       Nylon floss is available waxed and unwaxed, and in a variety of flavors. Because this type of floss is composed of many strands of nylon, it may sometimes tear or shred, especially between teeth with tight contact points. While more expensive, single filament (PTFE) floss slides easily between teeth, even those with tight spaces between teeth, and is virtually shred-resistant. When used properly, both types of floss are excellent at removing plaque and debris.
     </p>
-      
-<div class="floss-type-img">
-    <img :src="images.flossttype alt="Floss Types" />
-  </div>
-      
- <strong>How To Floss?</strong>
 
-<div class=flossing-technique-img">
-    <img :src="images.flossing alt="Flossing Technique" />
-  </div>
+    <div class="floss-type-img">
+      <img :src="images.flosstype" alt="Floss Types" />
+    </div>
+      
+    <strong>How To Floss?</strong>
+
+    <div class="flossing-technique-img">
+      <img :src="images.flossing" alt="Flossing Technique" />
+    </div>
       
     <p><strong>Preparation:</strong> Wrap about 18 inches of floss around your middle fingers, leaving about 3 inches of floss between your hands for cleaning.</p>
     <p><strong>Technique:</strong> Gently slide the floss between your teeth using a zig-zag motion. Be careful not to snap the floss into your gums.</p>
@@ -36,7 +35,7 @@
       <li>To remove the floss, use the same back-and-forth motion to bring the floss up and away from the teeth.</li>
     </ol>
     
-<div class="floss-img">
+    <div class="floss-img">
       <img :src="images.floss" alt="Floss" />
     </div>
       
