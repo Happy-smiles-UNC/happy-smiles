@@ -10,6 +10,7 @@
         <h3>Quick Links</h3>
         <ul class="footer-links">
           <li><router-link to="/">Home</router-link></li>
+          <!--<li><router-link to="/timer">Brushing Timer</router-link></li> -->
           <li><router-link to="/clinics">Find Clinics</router-link></li>
           <li><router-link to="/tips">Dental Tips</router-link></li>
           <li><router-link to="/about">About Us</router-link></li>
@@ -19,6 +20,7 @@
       <div class="footer-section">
         <h3>Resources</h3>
         <ul class="footer-links">
+          <li><router-link to="/tutorials">Tutorials</router-link></li>
           <li><router-link to="/brushing">Brushing Techniques</router-link></li>
           <li><router-link to="/flossing">Flossing Guide</router-link></li>
           <li><router-link to="/faq">Dental FAQ</router-link></li>

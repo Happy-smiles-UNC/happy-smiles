@@ -6,6 +6,8 @@ import AboutPage from '../components/AboutPage.vue'
 import BrushingTechniques from '../components/BrushingTechniques.vue'
 import FlossingGuide from '../components/FlossingGuide.vue'
 import DentalFAQ from '../components/DentalFAQ.vue'
+//import BrushingTimer from '../components/BrushingTimer.vue'
+import TutorialPage from '../components/TutorialPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +46,16 @@ const router = createRouter({
       path: '/faq',
       name: 'faq',
       component: DentalFAQ
+    },
+    /*{
+      path: '/timer',
+      name: 'timer',
+      component: BrushingTimer
+    },*/
+    {
+      path: '/tutorials',
+      name: 'tutorials',
+      component: TutorialPage
     }
   ]
 })
