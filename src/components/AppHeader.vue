@@ -5,28 +5,17 @@
       <h1 class="app-name">Happy Smiles</h1>
     </div>
     <nav class="nav-menu">
-      <a href="#" @click.prevent="navigateTo('home')" :class="{ 'nav-link': true, 'active': currentPage === 'home' }">Home</a>
-      <a href="#" @click.prevent="navigateTo('clinics')" :class="{ 'nav-link': true, 'active': currentPage === 'clinics' }">Find Clinics</a>
-      <a href="#" @click.prevent="navigateTo('tips')" :class="{ 'nav-link': true, 'active': currentPage === 'tips' }">Tips</a>
-      <a href="#" @click.prevent="navigateTo('about')" :class="{ 'nav-link': true, 'active': currentPage === 'about' }">About</a>
+      <router-link to="/" class="nav-link">Home</router-link>
+      <router-link to="/clinics" class="nav-link">Find Clinics</router-link>
+      <router-link to="/tips" class="nav-link">Tips</router-link>
+      <router-link to="/about" class="nav-link">About</router-link>
     </nav>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'AppHeader',
-  data() {
-    return {
-      currentPage: 'home'
-    }
-  },
-  methods: {
-    navigateTo(page) {
-      this.currentPage = page;
-      this.$emit('navigate', page);
-    }
-  }
+  name: 'AppHeader'
 }
 </script>
 
@@ -70,11 +59,11 @@ export default {
   transition: color 0.3s;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover, .router-link-active {
   color: #42b983;
 }
 
-.nav-link.active::after {
+.router-link-active::after {
   content: '';
   position: absolute;
   bottom: 0;

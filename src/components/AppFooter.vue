@@ -9,20 +9,20 @@
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul class="footer-links">
-          <li><a href="#" @click.prevent="navigateTo('home')">Home</a></li>
-          <li><a href="#" @click.prevent="navigateTo('clinics')">Find Clinics</a></li>
-          <li><a href="#" @click.prevent="navigateTo('tips')">Dental Tips</a></li>
-          <li><a href="#" @click.prevent="navigateTo('about')">About Us</a></li>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/clinics">Find Clinics</router-link></li>
+          <li><router-link to="/tips">Dental Tips</router-link></li>
+          <li><router-link to="/about">About Us</router-link></li>
         </ul>
       </div>
       
       <div class="footer-section">
         <h3>Resources</h3>
         <ul class="footer-links">
-          <li><a href="#" @click.prevent="navigateTo('brushing')">Brushing Techniques</a></li>
-          <li><a href="#" @click.prevent="navigateTo('flossing')">Flossing Guide</a></li>
-          <li><a href="#" @click.prevent="navigateTo('faq')">Dental FAQ</a></li>
-          <li><a href="#" @click.prevent="navigateTo('clinics')">Find a Dentist</a></li>
+          <li><router-link to="/brushing">Brushing Techniques</router-link></li>
+          <li><router-link to="/flossing">Flossing Guide</router-link></li>
+          <li><router-link to="/faq">Dental FAQ</router-link></li>
+          <li><router-link to="/clinics">Find a Dentist</router-link></li>
         </ul>
       </div>
     </div>
@@ -35,12 +35,7 @@
 
 <script>
 export default {
-  name: 'AppFooter',
-  methods: {
-    navigateTo(page) {
-      this.$emit('navigate', page);
-    }
-  }
+  name: 'AppFooter'
 }
 </script>
 
@@ -95,8 +90,9 @@ export default {
 
 .footer-bottom {
   background-color: #f0f0f0;
-  padding: 1rem 0;
   text-align: center;
+  padding: 1rem 0;
+  margin-top: 1rem;
   font-size: 0.9rem;
 }
 

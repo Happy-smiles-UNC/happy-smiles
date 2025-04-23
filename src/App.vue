@@ -1,37 +1,17 @@
 <script setup>
-import { ref } from 'vue'
-import DentalTracker from './components/DentalTracker.vue'
-import DentalClinicMap from './components/DentalClinicMap.vue'
-import TipsPage from './components/TipsPage.vue'
-import AboutPage from './components/AboutPage.vue'
-import BrushingTechniques from './components/BrushingTechniques.vue'
-import FlossingGuide from './components/FlossingGuide.vue'
-import DentalFAQ from './components/DentalFAQ.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
-
-const currentPage = ref('home')
-
-function handleNavigation(page) {
-  currentPage.value = page
-}
 </script>
 
 <template>
   <div class="app-container">
-    <AppHeader @navigate="handleNavigation" />
+    <AppHeader />
     
     <main class="main-content">
-      <DentalTracker v-if="currentPage === 'home'" />
-      <DentalClinicMap v-if="currentPage === 'clinics'" />
-      <TipsPage v-if="currentPage === 'tips'" />
-      <AboutPage v-if="currentPage === 'about'" />
-      <BrushingTechniques v-if="currentPage === 'brushing'" />
-      <FlossingGuide v-if="currentPage === 'flossing'" />
-      <DentalFAQ v-if="currentPage === 'faq'" />
+      <router-view />
     </main>
     
-    <AppFooter @navigate="handleNavigation" />
+    <AppFooter />
   </div>
 </template>
 
