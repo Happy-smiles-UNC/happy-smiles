@@ -100,7 +100,6 @@ h3 {
 .placeholder-text {
   text-align: center;
   padding: 1rem;
-  color: #666;
 }
 
 img {
@@ -111,7 +110,7 @@ img {
 }
 
 strong {
-  font-size: bold;
+  font-weight: bold;
 }
 </style>
 
