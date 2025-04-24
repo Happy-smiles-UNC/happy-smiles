@@ -2,10 +2,8 @@
   <div class="flossing-guide">
     <h2>Flossing Guide</h2>
 
-    <p class="placeholder-text">
-      <strong>What type of floss should I use?</strong><br />
-      There are two types of floss from which to choose:
-    </p>
+    <h3>What type of floss should I use?</h3>
+    <p>There are two types of floss from which to choose:</p>
 
     <ol>
       <li>Nylon (or multifilament) floss</li>
@@ -83,11 +81,19 @@ export default {
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 
-h2, h3 {
+h2 {
   color: #42b983;
   margin-bottom: 1rem;
+  text-align: center;
+}
+
+h3 {
+  color: #42b983;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
@@ -95,7 +101,6 @@ h2, h3 {
   text-align: center;
   padding: 1rem;
   color: #666;
-  font-style: italic;
 }
 
 img {
@@ -103,6 +108,10 @@ img {
   height: auto;
   display: block;
   margin: 1rem auto;
+}
+
+strong {
+  font-size: bold;
 }
 </style>
 
