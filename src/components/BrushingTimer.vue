@@ -218,13 +218,5 @@ h3 {
   .time {
     font-size: 2.5rem;
   }
-  
-  .toothbrush {
-    width: 180px;
-  }
-  
-  .toothbrush::before {
-    width: 160px;
-  }
 }
 </style> 
