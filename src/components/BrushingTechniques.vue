@@ -127,6 +127,7 @@ export default {
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 
 h2 {
@@ -179,10 +180,9 @@ h4 {
   font-size: 1rem;
   color: #444;
 }
-
-.bass-technique-img img {
-  width: 80%;
-  height: auto;
+.bass-technique-img {
+  display: flex;
+  justify-content: center;
 }
 
 .comparison-img {
