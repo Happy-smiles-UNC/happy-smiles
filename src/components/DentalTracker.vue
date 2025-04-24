@@ -4,6 +4,9 @@
     <p class="subtitle">Keep track of your daily dental hygiene habits</p>
     
     <div class="card">
+      <div v-if="showMessage" class="message-box">
+               <p>Please select an option to start tracking your dental hygiene habits.</p>
+      </div>
       <form @submit.prevent="saveActivity" class="tracker-form">
         <div class="form-group">
           <label>
@@ -22,9 +25,6 @@
               :class="{ active: brushed === false && brushedSelected }"
               @click="setNotBrushed"
             >No</button>
-           <div v-if="showMessage" class="message-box">
-               <p>Please select an option to start tracking your dental hygiene habits.</p>
-             </div>
           </div>
         </div>
         
