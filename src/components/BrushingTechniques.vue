@@ -2,7 +2,7 @@
   <div class="brushing-techniques">
     <h2>Brushing Techniques</h2>
 
-    <h3>Proper Brushing Technique</h3>
+    <h4>Proper Brushing Technique</h4>
     <div class="bass-technique-img">
       <img :src="images.brushing" alt="Modified Bass Technique" />
     </div>
@@ -27,14 +27,14 @@
     <h4>Toothbrush Maintenance:</h4>
     <p>Replace your toothbrush or toothbrush head every 3 months, or sooner if the bristles become frayed. Regular replacement ensures your brush is effective in cleaning your teeth and maintaining oral health.</p>
 
-    <h5>How To Use An Electric Toothbrush?</h5>
+    <h3>How To Use An Electric Toothbrush?</h3>
     <p><strong>Proper Positioning:</strong> Position the bristles at a 45-degree angle to the gums to enhance cleaning along the gumline.</p>
     <p><strong>Brushing Technique:</strong> Hold the brush head against each tooth individually and allow the toothbrush to rotate and vibrate; avoid scrubbing.</p>
     <p><strong>Time Allocation:</strong> Divide the mouth into four quadrants: upper left, upper right, lower left, and lower right. Spend 30 seconds on each quadrant for a total brushing time of 2 minutes.</p>
     <p><strong>Frequency of Brushing:</strong> Brush twice daily, preferably in the morning and before bedtime, to maintain optimal oral hygiene.</p>
     <p><strong>Toothbrush Maintenance:</strong> Replace the electric toothbrush head every 3 months, or sooner if the bristles show signs of wear.</p>
 
-    <h6>Regular vs. Electric Toothbrush</h6>
+    <h4>Regular vs. Electric Toothbrush</h4>
     <ol>
       <li><strong>Plaque Removal:</strong> Electric toothbrushes can remove more plaque than regular ones, largely due to their advanced brushing technology and consistent head movements.</li>
       <li><strong>Ease of Use:</strong> Electric toothbrushes are generally easier to use as they require less manual effort.</li>
@@ -50,7 +50,7 @@
       <img :src="images.toothbrush" alt="Manual vs Electric Toothbrush" />
     </div>
 
-    <h7>How To Brush Your Tongue?</h7>
+    <h3>How To Brush Your Tongue?</h3>
     <p><strong>Importance of Brushing the Tongue:</strong> Regular tongue cleaning removes bacteria, prevents bad breath, and enhances taste.</p>
     <p><strong>Using a Toothbrush:</strong> Gently brush your tongue from back to front using your regular brush or one with a tongue cleaner.</p>
     <p><strong>Using a Tongue Scraper:</strong> Gently scrape from the back of the tongue forward, rinsing between strokes.</p>
@@ -67,9 +67,6 @@
 import brushingImage from '@/assets/Images/brushing_technique.png';
 import tongueImage from '@/assets/Images/tongue_cleaning.jpg';
 import toothbrushImage from '@/assets/Images/manual-toothbrush-vs-electric-toothbrush.jpg';
-import flossImage from '@/assets/Images/floss.jpg';
-import flossingImage from '@/assets/Images/flossing_technique.jpg';
-import flosstypeImage from '@/assets/Images/floss_types.jpg';
 import step1Image from '@/assets/Images/step_1.jpeg';
 import step2Image from '@/assets/Images/step_2.jpg';
 import step3Image from '@/assets/Images/step_3.jpg';
@@ -85,9 +82,6 @@ export default {
         brushing: brushingImage,
         tongue: tongueImage,
         toothbrush: toothbrushImage,
-        floss: flossImage,
-        flossing: flossingImage,
-        flosstype: flosstypeImage,
       },
       brushingSteps: [
         {
@@ -133,7 +127,6 @@ export default {
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  color: black;
 }
 
 h2 {
@@ -143,14 +136,16 @@ h2 {
   text-align: center;
 }
 
-h3, h5, h7 {
-  margin-bottom: 1rem;
+h3 {
+  color: #42b983;
   font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-h4, h6 {
-  margin-bottom: 1rem;
+h4 {
   font-size: 1.25rem;
+  margin-top: 0.5rem;
 }
 
 .brushing-steps-grid {
@@ -185,9 +180,22 @@ h4, h6 {
   color: #444;
 }
 
-.bass-technique-img {
+.bass-technique-img img {
   width: 80%;
   height: auto;
 }
 
+.comparison-img {
+  display: flex;
+  justify-content: center;
+}
+
+.tongue-img {
+  display: flex;
+  justify-content: center;
+}
+
+strong {
+  font-weight: bold;
+}
 </style> 
