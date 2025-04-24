@@ -7,7 +7,7 @@
       <form @submit.prevent="saveActivity" class="tracker-form">
         <div class="form-group">
           <label>
-            <span class="emoji">🪥</span> Did you brush today?
+            <font-awesome-icon icon="fa-solid fa-tooth" class="icon" /> Did you brush today?
           </label>
           <div class="button-group">
             <button 
@@ -22,12 +22,15 @@
               :class="{ active: brushed === false && brushedSelected }"
               @click="setNotBrushed"
             >No</button>
+           <div v-if="showMessage" class="message-box">
+               <p>Please select an option to start tracking your dental hygiene habits.</p>
+             </div>
           </div>
         </div>
         
         <div class="form-group">
           <label>
-            <span class="emoji">🧵</span> Did you floss today?
+            <font-awesome-icon icon="fa-solid fa-teeth-open" class="icon" /> Did you floss today?
           </label>
           <div class="button-group">
             <button 
@@ -43,33 +46,36 @@
               @click="setNotFlossed"
             >No</button>
           </div>
-          <div v-if="showMessage" class="message-box">
-              <p>Please select an option to start tracking your dental hygiene habits.</p>
-            </div>
         </div>
         
-        <button type="submit" class="submit-btn">Track My Smile</button>
+        <button type="submit" class="submit-btn">
+          <font-awesome-icon icon="fa-solid fa-check" /> Track My Smile
+        </button>
       </form>
     </div>
 
     <div class="streak-info" v-if="streak > 0">
-      <h2>Current Streak: {{ streak }} days</h2>
+      <h2>Current Streak: {{ streak }} days <font-awesome-icon icon="fa-solid fa-fire" /></h2>
       <p>Keep it up for a healthier smile!</p>
     </div>
 
     <div class="history-card" v-if="activityHistory.length > 0">
-      <h2>Your Activity History</h2>
+      <h2><font-awesome-icon icon="fa-solid fa-clock-rotate-left" /> Your Activity History</h2>
       <ul class="history-list">
         <li v-for="(activity, index) in activityHistory" :key="index">
           <span class="date">{{ formatDate(activity.date) }}</span>
-          <span class="activity-icon" :class="{ completed: activity.brushed }">🪥</span>
-          <span class="activity-icon" :class="{ completed: activity.flossed }">🧵</span>
+          <span class="activity-icon" :class="{ completed: activity.brushed }">
+            <font-awesome-icon icon="fa-solid fa-tooth" />
+          </span>
+          <span class="activity-icon" :class="{ completed: activity.flossed }">
+            <font-awesome-icon icon="fa-solid fa-teeth-open" />
+          </span>
         </li>
       </ul>
     </div>
 
     <div class="tips-card">
-      <h2>Dental Health Tips</h2>
+      <h2><font-awesome-icon icon="fa-solid fa-lightbulb" /> Dental Health Tips</h2>
       <ul class="tips-list">
         <li>Brush at least twice a day for two minutes each time</li>
         <li>Replace your toothbrush every 3-4 months</li>
@@ -98,10 +104,29 @@ export default {
     }
   },
   mounted() {
-    // Initialize jQuery elements and event handlers
-    this.initializeJQuery();
+    $('.dental-tracker h1').hide().fadeIn(800);
+    $('.subtitle').hide().fadeIn(1200);
     
-    // Fetch activity history from localStorage
+    $('.submit-btn').hover(
+      function() {
+        $(this).css('transform', 'scale(1.05)');
+      },
+      function() {
+        $(this).css('transform', 'scale(1)');
+      }
+    );
+    
+    $('.form-group').on('click', '.option-btn', function() {
+      const group = $(this).closest('.form-group');
+      if ($(this).text() === 'Yes') {
+        group.find('.icon').addClass('icon-bounce');
+        group.css('background-color', 'rgba(66, 185, 131, 0.1)');
+      } else {
+        group.find('.icon').removeClass('icon-bounce');
+        group.css('background-color', 'transparent');
+      }
+    });
+    
     this.fetchActivityHistory();
   },
   methods: {
@@ -112,30 +137,6 @@ export default {
     setNotFlossed() {
       this.flossed = false;
       this.flossedSelected = true;
-    },
-    initializeJQuery() {
-      $('.dental-tracker h1').hide().fadeIn(800);
-      $('.subtitle').hide().fadeIn(1200);
-      
-      $('.submit-btn').hover(
-        function() {
-          $(this).css('transform', 'scale(1.05)');
-        },
-        function() {
-          $(this).css('transform', 'scale(1)');
-        }
-      );
-      
-      $('.form-group').on('click', '.option-btn', function() {
-        const group = $(this).closest('.form-group');
-        if ($(this).text() === 'Yes') {
-          group.find('.emoji').addClass('emoji-bounce');
-          group.css('background-color', 'rgba(66, 185, 131, 0.1)');
-        } else {
-          group.find('.emoji').removeClass('emoji-bounce');
-          group.css('background-color', 'transparent');
-        }
-      });
     },
     saveActivity() {
       if (!this.brushedSelected && this.brushed === false) {
@@ -181,7 +182,7 @@ export default {
         this.flossedSelected = false;
         
         $('.form-group').css('background-color', 'transparent');
-        $('.emoji').removeClass('emoji-bounce');
+        $('.icon').removeClass('icon-bounce');
         
         const $successMessage = $('<div class="success-message">Great job! Your activity has been tracked.</div>');
         $('body').append($successMessage);
@@ -331,9 +332,10 @@ h1 {
   margin-bottom: 10px;
 }
 
-.emoji {
+.icon {
   font-size: 1.5rem;
   margin-right: 0.5rem;
+  color: #42b983;
 }
 
 label {
@@ -434,6 +436,7 @@ label {
 
 .activity-icon.completed {
   opacity: 1;
+  color: #42b983;
 }
 
 .tips-list li {
@@ -449,45 +452,8 @@ label {
   left: 0;
 }
 
-@media (max-width: 600px) {
-  .dental-tracker {
-    padding: 1rem;
-  }
-  
-  .form-group {
-    padding: 15px 10px;
-  }
-  
-  .button-group {
-    gap: 15px;
-  }
-  
-  .option-btn {
-    padding: 16px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    min-height: 60px;
-  }
-  
-  .submit-btn {
-    padding: 16px;
-    font-size: 1.2rem;
-    min-height: 60px;
-    margin-top: 1.5rem;
-  }
-  
-  label {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-  }
-  
-  .emoji {
-    font-size: 1.8rem;
-  }
-}
-
-/* New styles for jQuery animations */
-.emoji-bounce {
+/* Animation styles */
+.icon-bounce {
   animation: bounce 0.6s ease infinite;
 }
 
@@ -522,5 +488,42 @@ label {
 
 .message-box {
   padding: 20px 10px;
+}
+
+@media (max-width: 600px) {
+  .dental-tracker {
+    padding: 1rem;
+  }
+  
+  .form-group {
+    padding: 15px 10px;
+  }
+  
+  .button-group {
+    gap: 15px;
+  }
+  
+  .option-btn {
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-height: 60px;
+  }
+  
+  .submit-btn {
+    padding: 16px;
+    font-size: 1.2rem;
+    min-height: 60px;
+    margin-top: 1.5rem;
+  }
+  
+  label {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    font-size: 1.8rem;
+  }
 }
 </style> 
