@@ -17,7 +17,7 @@ Happy Smiles is a Vue.js application with an Express backend that helps users ma
 
 - **Frontend**: Vue 3 with Vite
 - **Backend**: Express.js
-- **Data Storage**: JSON file for simplicity (could be upgraded to a database)
+- **Data Storage**: Local Storage
 
 ## Project Setup
 
@@ -40,7 +40,7 @@ This will start the application at http://localhost:3000
 
 ## Data Storage
 
-User activity data is stored in a JSON file in the `data` directory. In a production environment, this would typically be replaced with a database solution.
+User activity data is stored in Local Storage.
 
 ## Development
 
