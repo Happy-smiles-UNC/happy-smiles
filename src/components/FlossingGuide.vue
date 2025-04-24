@@ -10,7 +10,7 @@
       <li>PTFE (monofilament) floss</li>
     </ol>
 
-    <p class="placeholder-text">
+    <p>
       Nylon floss is available waxed and unwaxed, and in a variety of flavors. Because this type of floss is composed of many strands of nylon, it may sometimes tear or shred, especially between teeth with tight contact points. While more expensive, single filament (PTFE) floss slides easily between teeth, even those with tight spaces between teeth, and is virtually shred-resistant. When used properly, both types of floss are excellent at removing plaque and debris.
     </p>
 
@@ -95,11 +95,6 @@ h3 {
   margin-bottom: 1rem;
   margin-top: 1rem;
   text-align: center;
-}
-
-.placeholder-text {
-  text-align: center;
-  padding: 1rem;
 }
 
 img {
