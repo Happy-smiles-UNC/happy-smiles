@@ -6,17 +6,46 @@
     <div class="card">
       <form @submit.prevent="saveActivity" class="tracker-form">
         <div class="form-group">
-          <label for="brushed">
+          <label>
             <span class="emoji">🪥</span> Did you brush today?
           </label>
-          <input type="checkbox" id="brushed" v-model="brushed">
+          <div class="button-group">
+            <button 
+              type="button" 
+              class="option-btn" 
+              :class="{ active: brushed === true }"
+              @click="brushed = true"
+            >Yes</button>
+            <button 
+              type="button" 
+              class="option-btn" 
+              :class="{ active: brushed === false && brushedSelected }"
+              @click="setNotBrushed"
+            >No</button>
+          </div>
         </div>
         
         <div class="form-group">
-          <label for="flossed">
+          <label>
             <span class="emoji">🧵</span> Did you floss today?
           </label>
-          <input type="checkbox" id="flossed" v-model="flossed">
+          <div class="button-group">
+            <button 
+              type="button" 
+              class="option-btn" 
+              :class="{ active: flossed === true }"
+              @click="flossed = true"
+            >Yes</button>
+            <button 
+              type="button" 
+              class="option-btn" 
+              :class="{ active: flossed === false && flossedSelected }"
+              @click="setNotFlossed"
+            >No</button>
+          </div>
+          <div v-if="showMessage" class="message-box">
+              <p>Please select an option to start tracking your dental hygiene habits.</p>
+            </div>
         </div>
         
         <button type="submit" class="submit-btn">Track My Smile</button>
@@ -61,24 +90,33 @@ export default {
     return {
       brushed: false,
       flossed: false,
+      brushedSelected: false,
+      flossedSelected: false,
       streak: 0,
-      activityHistory: []
+      activityHistory: [],
+      showMessage: false
     }
   },
   mounted() {
     // Initialize jQuery elements and event handlers
     this.initializeJQuery();
     
-    // Fetch activity history
+    // Fetch activity history from localStorage
     this.fetchActivityHistory();
   },
   methods: {
+    setNotBrushed() {
+      this.brushed = false;
+      this.brushedSelected = true;
+    },
+    setNotFlossed() {
+      this.flossed = false;
+      this.flossedSelected = true;
+    },
     initializeJQuery() {
-      // Using jQuery to add animation effects to UI elements
       $('.dental-tracker h1').hide().fadeIn(800);
       $('.subtitle').hide().fadeIn(1200);
       
-      // Add hover effects to the submit button using jQuery
       $('.submit-btn').hover(
         function() {
           $(this).css('transform', 'scale(1.05)');
@@ -88,103 +126,108 @@ export default {
         }
       );
       
-      // Add click animation to checkboxes
-      $('#brushed, #flossed').on('change', function() {
-        if ($(this).is(':checked')) {
-          $(this).closest('.form-group').css('background-color', 'rgba(66, 185, 131, 0.1)');
-          $(this).closest('.form-group').find('.emoji').addClass('emoji-bounce');
+      $('.form-group').on('click', '.option-btn', function() {
+        const group = $(this).closest('.form-group');
+        if ($(this).text() === 'Yes') {
+          group.find('.emoji').addClass('emoji-bounce');
+          group.css('background-color', 'rgba(66, 185, 131, 0.1)');
         } else {
-          $(this).closest('.form-group').css('background-color', 'transparent');
-          $(this).closest('.form-group').find('.emoji').removeClass('emoji-bounce');
+          group.find('.emoji').removeClass('emoji-bounce');
+          group.css('background-color', 'transparent');
         }
       });
     },
     saveActivity() {
-      const date = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+      if (!this.brushedSelected && this.brushed === false) {
+        this.brushedSelected = true;
+      }
+      if (!this.flossedSelected && this.flossed === false) {
+        this.flossedSelected = true;
+      }
       
-      fetch("/save-activity", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          date: date,
+      const date = new Date().toISOString().split('T')[0]; 
+      
+      try {
+        let storedData = localStorage.getItem('dentalActivityHistory');
+        let activityData = storedData ? JSON.parse(storedData) : {};
+        
+        activityData[date] = {
           brushed: this.brushed,
           flossed: this.flossed
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        // Add to local history and reset form
+        };
+        
+        localStorage.setItem('dentalActivityHistory', JSON.stringify(activityData));
+        
         this.activityHistory.unshift({
           date: date,
           brushed: this.brushed,
           flossed: this.flossed
         });
         
-        // Update streak logic
         if (this.brushed && this.flossed) {
           this.streak += 1;
+          localStorage.setItem('dentalStreak', this.streak);
           
-          // Use jQuery to animate the streak counter
           $('.streak-info h2').css('color', '#ff6b6b');
           $('.streak-info h2').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
         } else {
           this.streak = 0;
+          localStorage.setItem('dentalStreak', 0);
         }
         
-        // Reset form
         this.brushed = false;
         this.flossed = false;
+        this.brushedSelected = false;
+        this.flossedSelected = false;
         
-        // Clear checkbox styling
         $('.form-group').css('background-color', 'transparent');
         $('.emoji').removeClass('emoji-bounce');
         
-        // Show success message with jQuery animation
         const $successMessage = $('<div class="success-message">Great job! Your activity has been tracked.</div>');
         $('body').append($successMessage);
         $successMessage.fadeIn().delay(3000).fadeOut(function() {
           $(this).remove();
         });
-      })
-      .catch(error => {
-        console.error("Error saving activity:", error);
+      } catch (error) {
+        console.error("Error saving activity to localStorage:", error);
         
-        // Show error message with jQuery
         const $errorMessage = $('<div class="error-message">There was an error saving your activity. Please try again.</div>');
         $('body').append($errorMessage);
         $errorMessage.fadeIn().delay(3000).fadeOut(function() {
           $(this).remove();
         });
-      });
+      }
     },
     fetchActivityHistory() {
-      // Fetch activity history from the server
-      fetch("/activity-history")
-        .then(response => response.json())
-        .then(data => {
-          // Convert the object to an array of activities
-          const activitiesArray = Object.keys(data).map(date => ({
+      try {
+        const storedData = localStorage.getItem('dentalActivityHistory');
+        const storedStreak = localStorage.getItem('dentalStreak');
+        
+        if (storedData) {
+          const activityData = JSON.parse(storedData);
+          
+          const activitiesArray = Object.keys(activityData).map(date => ({
             date,
-            brushed: data[date].brushed,
-            flossed: data[date].flossed
+            brushed: activityData[date].brushed,
+            flossed: activityData[date].flossed
           }));
           
-          // Sort by date (most recent first)
           activitiesArray.sort((a, b) => new Date(b.date) - new Date(a.date));
           
           this.activityHistory = activitiesArray;
           
-          // Calculate streak based on consecutive days with both activities completed
-          this.calculateStreak(activitiesArray);
-        })
-        .catch(error => {
-          console.error("Error fetching activity history:", error);
-          
-          // Fallback to sample data for demo purposes
-          this.generateSampleData();
-        });
+          if (storedStreak !== null) {
+            this.streak = parseInt(storedStreak);
+          } else {
+            this.calculateStreak(activitiesArray);
+          }
+        } else {
+          // just show a message to the user to start tracking
+          this.showMessage = true;
+        }
+      } catch (error) {
+        console.error("Error fetching activity history from localStorage:", error);
+      }
     },
     calculateStreak(activities) {
       if (!activities || activities.length === 0) {
@@ -192,12 +235,11 @@ export default {
         return;
       }
       
-      // Sort activities by date (most recent first)
+      // most recent first
       const sortedActivities = [...activities].sort((a, b) => 
         new Date(b.date) - new Date(a.date)
       );
       
-      // Check if the most recent activity is today or yesterday
       const mostRecentDate = new Date(sortedActivities[0].date);
       const today = new Date();
       today.setHours(0, 0, 0, 0);
@@ -206,12 +248,11 @@ export default {
       yesterday.setDate(yesterday.getDate() - 1);
       
       if (mostRecentDate < yesterday) {
-        // The streak is broken if most recent activity is before yesterday
         this.streak = 0;
+        localStorage.setItem('dentalStreak', 0);
         return;
       }
       
-      // Count consecutive days with both activities completed
       let currentStreak = 0;
       let currentDate = new Date(today);
       
@@ -219,53 +260,24 @@ export default {
         const activityDate = new Date(activity.date);
         activityDate.setHours(0, 0, 0, 0);
         
-        // Check if this activity is from the expected date in the streak
         const expectedDate = new Date(currentDate);
         expectedDate.setHours(0, 0, 0, 0);
         
-        // If there's a gap in the dates, the streak is broken
         if (activityDate.getTime() !== expectedDate.getTime()) {
           break;
         }
         
-        // If both activities were completed, add to streak
         if (activity.brushed && activity.flossed) {
           currentStreak++;
           
-          // Move to the previous day to continue checking the streak
           currentDate.setDate(currentDate.getDate() - 1);
         } else {
-          // If both weren't completed, the streak is broken
           break;
         }
       }
       
       this.streak = currentStreak;
-    },
-    generateSampleData() {
-      // Generate sample data for demo purposes (if API fails)
-      const today = new Date();
-      this.activityHistory = [];
-      
-      // Generate some sample history data for the past week
-      for (let i = 6; i >= 0; i--) {
-        const date = new Date(today);
-        date.setDate(date.getDate() - i);
-        const dateString = date.toISOString().split('T')[0];
-        
-        // Random data for demo purposes
-        const brushed = Math.random() > 0.3;
-        const flossed = Math.random() > 0.5;
-        
-        this.activityHistory.push({
-          date: dateString,
-          brushed,
-          flossed
-        });
-      }
-      
-      // Calculate streak based on the sample data
-      this.calculateStreak(this.activityHistory);
+      localStorage.setItem('dentalStreak', currentStreak);
     },
     formatDate(dateString) {
       const date = new Date(dateString);
@@ -311,11 +323,12 @@ h1 {
 
 .form-group {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
   border-radius: 8px;
   transition: background-color 0.3s;
+  margin-bottom: 10px;
 }
 
 .emoji {
@@ -327,12 +340,35 @@ label {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+  margin-bottom: 12px;
 }
 
-input[type="checkbox"] {
-  width: 24px;
-  height: 24px;
+.button-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.option-btn {
+  background-color: #f5f5f5;
+  color: #666;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: all 0.3s;
+  flex: 1;
+  min-width: 90px;
+}
+
+.option-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.option-btn.active {
+  background-color: #42b983;
+  color: white;
 }
 
 .submit-btn {
@@ -419,9 +455,34 @@ input[type="checkbox"] {
   }
   
   .form-group {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    padding: 15px 10px;
+  }
+  
+  .button-group {
+    gap: 15px;
+  }
+  
+  .option-btn {
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-height: 60px;
+  }
+  
+  .submit-btn {
+    padding: 16px;
+    font-size: 1.2rem;
+    min-height: 60px;
+    margin-top: 1.5rem;
+  }
+  
+  label {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .emoji {
+    font-size: 1.8rem;
   }
 }
 
@@ -457,5 +518,9 @@ input[type="checkbox"] {
 
 .error-message {
   background-color: #ff6b6b;
+}
+
+.message-box {
+  padding: 20px 10px;
 }
 </style> 
