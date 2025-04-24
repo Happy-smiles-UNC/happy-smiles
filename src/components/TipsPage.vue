@@ -38,6 +38,7 @@ export default {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Nunito', sans-serif;
+  color: black;
 }
 
 h2 {
@@ -60,6 +61,7 @@ h2 {
   border-left: 6px solid #00cec9;
   border-radius: 8px;
   line-height: 1.6;
+  color: black;
 }
 
 .cta-box {
@@ -69,6 +71,10 @@ h2 {
   text-align: center;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.cta-box p {
+  color: black;
 }
 
 .cta-button {
