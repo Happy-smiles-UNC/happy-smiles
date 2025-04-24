@@ -87,5 +87,9 @@ h2 {
   border-radius: 8px;
   margin-top: 1rem;
 }
+
+strong {
+  font-weight: bold;
+}
 </style>
 
