@@ -10,7 +10,7 @@
         <h3>Quick Links</h3>
         <ul class="footer-links">
           <li><router-link to="/">Home</router-link></li>
-          <!--<li><router-link to="/timer">Brushing Timer</router-link></li> -->
+          <li><router-link to="/timer">Brushing Timer</router-link></li>
           <li><router-link to="/clinics">Find Clinics</router-link></li>
           <li><router-link to="/tips">Dental Tips</router-link></li>
           <li><router-link to="/about">About Us</router-link></li>

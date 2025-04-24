@@ -6,7 +6,7 @@
     </div>
     <nav class="nav-menu">
       <router-link to="/" class="nav-link">Home</router-link>
-      <!--<router-link to="/timer" class="nav-link">Brushing Timer</router-link> -->
+      <router-link to="/timer" class="nav-link">Brushing Timer</router-link>
       <router-link to="/clinics" class="nav-link">Find Clinics</router-link>
       
       <div class="dropdown">
