@@ -1,5 +1,5 @@
 <template>
-  <div class="tips-container">
+  <div class="tips-page">
     <h2>🪥 Dental Health Tips</h2>
     
     <ul class="tips-list">
@@ -22,6 +22,7 @@
 </template>
 
 
+
 <script>
 export default {
   name: 'TipsPage'
@@ -30,23 +31,55 @@ export default {
 
 <style scoped>
 .tips-page {
-  margin-bottom: 2rem;
-  padding: 1rem;
   background-color: white;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 850px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif;
 }
 
 h2 {
   color: #42b983;
   margin-bottom: 1.5rem;
   text-align: center;
+  font-family: 'Baloo 2', cursive;
 }
 
-.placeholder-text {
-  text-align: center;
-  padding: 2rem;
-  color: #666;
-  font-style: italic;
+.tips-list {
+  list-style: none;
+  padding: 0;
 }
-</style> 
+
+.tips-list li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  background-color: #f1f8ff;
+  padding: 1rem;
+  border-left: 6px solid #00cec9;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.cta-box {
+  margin-top: 2rem;
+  background: #dff9fb;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #00cec9;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+</style>
+
