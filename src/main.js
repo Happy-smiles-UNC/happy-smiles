@@ -11,6 +11,8 @@ import 'leaflet/dist/leaflet.css'
 // Font Awesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+// Import all FontAwesome solid icons you need
 import { 
   faTooth, 
   faTeethOpen, 
@@ -20,10 +22,23 @@ import {
   faLightbulb,
   faHome,
   faMap,
-  faInfoCircle
+  faInfoCircle,
+  faToothbrush, 
+  faPumpSoap, 
+  faTriangleExclamation, 
+  faRecycle, 
+  faBolt, 
+  faGlassWaterDroplet, 
+  faAppleWhole, 
+  faSmokingBan, 
+  faChild, 
+  faQuestionCircle, 
+  faFaceGrinBeam,
+  faFaceSmile,
+  faUsers
 } from '@fortawesome/free-solid-svg-icons'
 
-// Add icons to the library
+// Add all icons to the library
 library.add(
   faTooth, 
   faTeethOpen, 
@@ -33,7 +48,20 @@ library.add(
   faLightbulb,
   faHome,
   faMap,
-  faInfoCircle
+  faInfoCircle,
+  faToothbrush, 
+  faPumpSoap, 
+  faTriangleExclamation, 
+  faRecycle, 
+  faBolt, 
+  faGlassWaterDroplet, 
+  faAppleWhole, 
+  faSmokingBan, 
+  faChild, 
+  faQuestionCircle,
+  faFaceGrinBeam,
+  faFaceSmile,
+  faUsers
 )
 
 // Make jQuery available globally
