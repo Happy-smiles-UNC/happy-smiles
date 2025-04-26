@@ -28,8 +28,14 @@
 </template>
 
 <script>
+// Import FontAwesome component because you're using it here
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 export default {
-  name: 'AboutPage'
+  name: 'AboutPage',
+  components: {
+    FontAwesomeIcon
+  }
 }
 </script>
 
@@ -48,8 +54,8 @@ h2 {
   color: #42b983;
   margin-bottom: 2rem;
   text-align: center;
-  font-weight: 800; /* bold */
-  font-size: 2.2rem; /* bigger heading */
+  font-weight: 800; /* extra bold */
+  font-size: 2.2rem;
 }
 
 .about-section {
