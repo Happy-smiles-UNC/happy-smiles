@@ -3,7 +3,7 @@
     <h2><font-awesome-icon icon="fa-solid fa-question-circle" class="icon" /> Dental Frequently Asked Questions</h2>
     <div class="faq-list">
       <ol>
-        <!-- Original 5 FAQs -->
+        <!-- First 5 FAQs -->
         <li>
           <strong><font-awesome-icon icon="fa-solid fa-toothbrush" class="icon" /> How long and how often should I brush my teeth?</strong><br />
           Brush your teeth <strong>twice a day for two minutes</strong> each time. Use a timer to keep track!
@@ -46,7 +46,6 @@
           <strong><font-awesome-icon icon="fa-solid fa-child" class="icon" /> When should children first see a dentist?</strong><br />
           Children should visit a dentist by their first birthday or within six months of their first tooth erupting.
         </li>
-
       </ol>
     </div>
   </div>
@@ -80,7 +79,7 @@ h2 {
 .faq-list ol {
   padding-left: 1.5rem;
   line-height: 1.8;
-  color: #333;
+  color: #555; /* lighter color for answers */
 }
 
 .faq-list li {
@@ -90,6 +89,14 @@ h2 {
   border-left: 6px solid #00cec9;
   border-radius: 8px;
   font-size: 1.05rem;
+}
+
+.faq-list li strong {
+  display: block;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: #2d3436; /* darker color for questions */
 }
 
 .icon {
