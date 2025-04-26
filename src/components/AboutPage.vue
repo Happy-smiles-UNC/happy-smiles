@@ -1,6 +1,6 @@
 <template>
   <div class="about-page">
-    <h2>About Happy Smiles</h2>
+    <h2><font-awesome-icon icon="fa-solid fa-tooth" class="icon" /> About Happy Smiles</h2>
 
     <section class="about-section">
       <p>
@@ -35,33 +35,53 @@ export default {
 
 <style scoped>
 .about-page {
-  margin-bottom: 2rem;
-  padding: 1rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 900px;
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif;
 }
 
 h2 {
   color: #42b983;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
+  font-weight: 800; /* bold */
+  font-size: 2.2rem; /* bigger heading */
 }
 
 .about-section {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.8;
   color: #333;
 }
 
 .about-section h3 {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 700; /* bold */
   color: #2d3436;
 }
 
 .about-section ul {
-  margin-left: 1.5rem;
-  list-style-type: disc;
+  margin-left: 2rem;
   padding-left: 1rem;
+  list-style-type: disc;
 }
-</style> 
+
+.about-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.about-section p {
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  color: #00b894;
+}
+</style>
