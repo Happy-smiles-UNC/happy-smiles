@@ -1,6 +1,6 @@
 <template>
   <div class="tips-page">
-    <h2>🪥 Dental Health Tips</h2>
+    <h2>Dental Health Tips</h2>
     
     <ul class="tips-list">
       <li><strong>Floss daily:</strong> Clean between your teeth once a day to prevent plaque buildup.</li>
