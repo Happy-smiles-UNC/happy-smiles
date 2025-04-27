@@ -41,11 +41,6 @@ export default {
           link: "https://youtu.be/2yxa67n5JR4"
         },
         {
-          title: "Oral Health and Nutrition – Eating for Healthy Teeth and Gums",
-          description: "Learn how diet impacts dental health and discover budget-friendly healthy eating tips.",
-          link: "https://youtu.be/2yxa67n5JR4"
-        },
-        {
           title: "How To Use A Manual Toothbrush",
           description: "Learn the correct brushing angles, technique, and how to maintain your toothbrush for optimal care.",
           link: "https://youtu.be/vcbBWs5WPu4?si=ItN3Iy_Ju81fDdnU"
