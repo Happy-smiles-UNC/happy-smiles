@@ -10,7 +10,7 @@
         </li>
         
         <li>
-          <strong><font-awesome-icon icon="fa-solid fa-tooth" class="icon" /> What type of toothbrush should I use?</strong><br />
+          <strong>What type of toothbrush should I use?</strong><br />
           The ADA recommends a soft-bristled toothbrush with a small head.<br />
           Electric brushes are great for extra cleaning and easier handling.
         </li>
