@@ -2,7 +2,7 @@
   <div class="brushing-techniques">
     <h2>Brushing Techniques</h2>
 
-    <h4>Proper Brushing Technique</h4>
+    <h3>Proper Brushing Technique</h3>
     <div class="bass-technique-img">
       <img :src="images.brushing" alt="Modified Bass Technique" />
     </div>
@@ -19,13 +19,19 @@
     </div>
 
     <h4>Time Allocation:</h4>
-    <p>Divide your mouth into four quadrants: upper left, upper right, lower left, and lower right. Spend at least 30 seconds brushing each quadrant, ensuring thorough cleaning for a total of 2 minutes.</p>
+    <p class="placeholder-text">
+      Divide your mouth into four quadrants: upper left, upper right, lower left, and lower right. Spend at least 30 seconds brushing each quadrant, ensuring thorough cleaning for a total of 2 minutes.
+    </p>
 
     <h4>Frequency of Brushing:</h4>
-    <p>Brush at least twice a day, ideally in the morning and before bedtime, to maintain optimal oral hygiene.</p>
+    <p class="placeholder-text">
+      Brush at least twice a day, ideally in the morning and before bedtime, to maintain optimal oral hygiene.
+    </p>
 
     <h4>Toothbrush Maintenance:</h4>
-    <p>Replace your toothbrush or toothbrush head every 3 months, or sooner if the bristles become frayed. Regular replacement ensures your brush is effective in cleaning your teeth and maintaining oral health.</p>
+    <p class="placeholder-text">
+      Replace your toothbrush or toothbrush head every 3 months, or sooner if the bristles become frayed. Regular replacement ensures your brush is effective in cleaning your teeth and maintaining oral health.
+    </p>
 
     <h3>How To Use An Electric Toothbrush?</h3>
     <p><strong>Proper Positioning:</strong> Position the bristles at a 45-degree angle to the gums to enhance cleaning along the gumline.</p>
@@ -132,28 +138,44 @@ export default {
 
 h2 {
   color: #42b983;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 h3 {
   color: #42b983;
-  font-size: 1.5rem;
-  text-align: center;
+  margin-bottom: 1rem;
   margin-top: 1rem;
+  text-align: center;
 }
 
 h4 {
   font-size: 1.25rem;
   margin-top: 0.5rem;
+  margin-bottom: 1rem
 }
 
 .brushing-steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+  gap: 1rem;
   padding: 1rem 0;
+  width: 100%;
+  max-width: 1200px; /* Limit width on large screens */
+  margin: 0 auto; /* Center it */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .brushing-steps-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets/small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .brushing-steps-grid {
+    grid-template-columns: 1fr; /* 1 column on very small phones */
+  }
 }
 
 .brushing-step {
@@ -180,19 +202,17 @@ h4 {
   font-size: 1rem;
   color: #444;
 }
-.bass-technique-img {
-  display: flex;
-  justify-content: center;
+
+.placeholder-text {
+  padding: 1rem;
 }
 
-.comparison-img {
-  display: flex;
-  justify-content: center;
-}
-
-.tongue-img {
-  display: flex;
-  justify-content: center;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  object-fit: contain;
 }
 
 strong {
