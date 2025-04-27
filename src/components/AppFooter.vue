@@ -49,7 +49,7 @@
 
     <!-- Footer Bottom -->
     <div class="footer-bottom">
-      <p>Designed to inspire healthy smiles <font-awesome-icon icon="fa-solid fa-tooth" class="icon" /> Team Happy Smiles</p>
+      <p>Designed to inspire healthy smiles <font-awesome-icon icon="fa-solid fa-tooth" class="icon" /></p>
       <p>&copy; 2025 Happy Smiles. All rights reserved.</p>
     </div>
   </footer>
