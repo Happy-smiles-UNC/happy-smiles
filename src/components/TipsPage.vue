@@ -3,18 +3,18 @@
     <h2>🪥 Dental Health Tips</h2>
     
     <ul class="tips-list">
-      <li>🦷 <strong>Floss daily:</strong> Clean between your teeth once a day to prevent plaque buildup.</li>
-      <li>🪥 <strong>Dental Visits:</strong> See your dentist every 6 months for a checkup and cleaning.</li>
-      <li>🧴 <strong>Use Fluoride Toothpaste:</strong> Strengthens enamel and prevents cavities.</li>
-      <li>🥗 <strong>Eat Healthy:</strong> Limit sugary snacks and eat more fruits and veggies.</li>
-      <li>🚭 <strong>Quit Smoking:</strong> It causes gum disease and stains your teeth.</li>
-      <li>😬 <strong>Use a Mouthguard:</strong> Especially if you play sports!</li>
-      <li>🤰 <strong>Pregnant?</strong> Keep brushing and visit your dentist.</li>
-      <li>👶 <strong>Start Early:</strong> Begin brushing when the first tooth appears.</li>
+      <li><strong>Floss daily:</strong> Clean between your teeth once a day to prevent plaque buildup.</li>
+      <li><strong>Dental Visits:</strong> See your dentist every 6 months for a checkup and cleaning.</li>
+      <li><strong>Use Fluoride Toothpaste:</strong> Strengthens enamel and prevents cavities.</li>
+      <li><strong>Eat Healthy:</strong> Limit sugary snacks and eat more fruits and veggies.</li>
+      <li><strong>Quit Smoking:</strong> It causes gum disease and stains your teeth.</li>
+      <li><strong>Use a Mouthguard:</strong> Especially if you play sports!</li>
+      <li><strong>Pregnant?</strong> Keep brushing and visit your dentist.</li>
+      <li><strong>Start Early:</strong> Begin brushing when the first tooth appears.</li>
     </ul>
 
     <div class="cta-box">
-      <h3>✨ Ready to build better brushing habits?</h3>
+      <h3>Ready to build better brushing habits?</h3>
       <p>Track your daily dental care with our smile tracker!</p>
       <a href="/tracker" class="cta-button">Open Tracker</a>
     </div>
@@ -45,7 +45,6 @@ h2 {
   color: #42b983;
   margin-bottom: 1.5rem;
   text-align: center;
-  font-family: 'Baloo 2', cursive;
 }
 
 .tips-list {
