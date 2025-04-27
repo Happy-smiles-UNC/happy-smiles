@@ -301,6 +301,8 @@ h1 {
   color: #42b983;
   text-align: center;
   margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 800;
 }
 
 .subtitle {

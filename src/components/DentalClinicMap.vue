@@ -380,6 +380,8 @@ h2 {
   color: #42b983;
   margin-bottom: 1.5rem;
   text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
 }
 
 h3 {

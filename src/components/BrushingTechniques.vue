@@ -149,12 +149,14 @@ h3 {
   margin-bottom: 1rem;
   text-align: center;
   font-weight: 700;
+  font-size: 1.75rem;
 }
 
 h4 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .brushing-steps-grid {
