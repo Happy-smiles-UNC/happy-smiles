@@ -138,41 +138,32 @@ export default {
 
 h2 {
   color: #42b983;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 h3 {
   color: #42b983;
+  margin-top: 2rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
   text-align: center;
 }
 
 h4 {
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
 .brushing-steps-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.5rem;
   padding: 1rem 0;
   width: 100%;
-  max-width: 1200px; /* Limit width on large screens */
-  margin: 0 auto; /* Center it */
+  max-width: 1200px;
+  margin: 0 auto;
   box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-  .brushing-steps-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets/small screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .brushing-steps-grid {
-    grid-template-columns: 1fr; /* 1 column on very small phones */
-  }
 }
 
 .brushing-step {
@@ -202,6 +193,8 @@ h4 {
 
 .placeholder-text {
   padding: 1rem;
+  line-height: 1.6;
+  color: #333;
 }
 
 img {
@@ -215,4 +208,4 @@ img {
 strong {
   font-weight: bold;
 }
-</style> 
+</style>
