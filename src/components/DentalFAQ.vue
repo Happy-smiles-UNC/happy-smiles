@@ -5,13 +5,13 @@
       <ol>
         <li>
           <strong><font-awesome-icon icon="fa-solid fa-toothbrush" class="icon" /> How long and how often should I brush my teeth?</strong><br />
-          Brush your teeth <strong>twice a day for two minutes</strong> each time.<br />
+          Brush your teeth twice a day for two minutes each time.<br />
           Use a timer to keep track!
         </li>
         
         <li>
           <strong><font-awesome-icon icon="fa-solid fa-tooth" class="icon" /> What type of toothbrush should I use?</strong><br />
-          The ADA recommends a <strong>soft-bristled toothbrush</strong> with a small head.<br />
+          The ADA recommends a soft-bristled toothbrush with a small head.<br />
           Electric brushes are great for extra cleaning and easier handling.
         </li>
 
@@ -23,7 +23,7 @@
 
         <li>
           <strong><font-awesome-icon icon="fa-solid fa-triangle-exclamation" class="icon" /> Can I over brush my teeth?</strong><br />
-          Brushing too hard can cause <strong>gum damage and enamel wear</strong>.<br />
+          Brushing too hard can cause gum damage and enamel wear.<br />
           Be gentle and let your brush do the work.
         </li>
 
@@ -41,7 +41,7 @@
 
         <li>
           <strong><font-awesome-icon icon="fa-solid fa-glass-water-droplet" class="icon" /> Is mouthwash necessary?</strong><br />
-          Mouthwash can help reduce bacteria, freshen breath, and add fluoride protection —<br />
+          Mouthwash can help reduce bacteria, freshen breath, and add fluoride protection <br />
           but it’s not a substitute for brushing and flossing.
         </li>
 
@@ -53,14 +53,13 @@
 
         <li>
           <strong><font-awesome-icon icon="fa-solid fa-smoking-ban" class="icon" /> How does smoking affect dental health?</strong><br />
-          Smoking can cause gum disease, tooth loss, and serious oral health problems including oral cancer.<br />
+          Smoking can cause gum disease, tooth loss, and oral health problems including oral cancer.<br />
           Quitting smoking greatly improves your oral health.
         </li>
 
         <li>
           <strong><font-awesome-icon icon="fa-solid fa-child" class="icon" /> When should children first see a dentist?</strong><br />
-          Children should visit a dentist by their first birthday,<br />
-          or within six months after their first tooth erupts.
+          Children should visit a dentist by their first birthday, or within six months after their first tooth erupts.
         </li>
       </ol>
     </div>
