@@ -1,65 +1,56 @@
 <template>
   <div class="faq-page">
-    <h2><font-awesome-icon icon="fa-solid fa-question-circle" class="icon" /> Dental Frequently Asked Questions</h2>
+    <h2>Dental Frequently Asked Questions</h2>
     <div class="faq-list">
       <ol>
         <li>
-          <strong><font-awesome-icon icon="fa-solid fa-toothbrush" class="icon" /> How long and how often should I brush my teeth?</strong><br />
-          Brush your teeth twice a day for two minutes each time.<br />
-          Use a timer to keep track!
-          <div class="question"><font-awesome-icon icon="fa-solid fa-toothbrush" class="icon" /> How long and how often should I brush my teeth?</div>
+          <div class="question">How long and how often should I brush my teeth?</div>
           Brush your teeth <strong>twice a day for two minutes</strong> each time.<br /> Use a timer to keep track!
         </li>
         
         <li>
-          <strong>What type of toothbrush should I use?</strong><br />
-          The ADA recommends a soft-bristled toothbrush with a small head.<br />
-          Electric brushes are great for extra cleaning and easier handling.
-          <div class="question"><font-awesome-icon icon="fa-solid fa-tooth" class="icon" /> What type of toothbrush should I use?</div>
+          <div class="question">What type of toothbrush should I use?</div>
           The ADA recommends a <strong>soft-bristled toothbrush</strong> with a small head.<br /> Electric brushes are great for extra cleaning and easier handling.
         </li>
 
         <li>
-          <strong><font-awesome-icon icon="fa-solid fa-pump-soap" class="icon" /> What toothpaste should I use?</strong><br />
-          Choose toothpaste based on your needs — <em>cavity protection, sensitivity relief, or whitening</em>.<br />
-          When in doubt, ask your dentist.
-          <div class="question"><font-awesome-icon icon="fa-solid fa-pump-soap" class="icon" /> What toothpaste should I use?</div>
+          <div class="question">What toothpaste should I use?</div>
           Choose toothpaste based on your needs—<em>cavity protection, sensitivity relief, or whitening</em>.<br /> When in doubt, ask your dentist.
         </li>
 
         <li>
-          <div class="question"><font-awesome-icon icon="fa-solid fa-triangle-exclamation" class="icon" /> Can I over brush my teeth?</div>
+          <div class="question">Can I over brush my teeth?</div>
           Yes! Brushing too hard can cause <strong>gum damage and enamel wear</strong>.<br /> Be gentle and let your brush do the work.
         </li>
 
         <li>
-          <div class="question"><font-awesome-icon icon="fa-solid fa-recycle" class="icon" /> How often should I replace my toothbrush?</div>
-          Every 3–4 months, or sooner if the bristles are worn.<br /> Always replace after an illness to prevent reinfection.
+          <div class="question">How often should I replace my toothbrush?</div>
+          Replace your toothbrush every 3–4 months, or sooner if the bristles are worn.<br /> Always replace it after an illness to prevent reinfection.
         </li>
 
         <li>
-          <div class="question"><font-awesome-icon icon="fa-solid fa-bolt" class="icon" /> Why is flossing important?</div>
-          Flossing removes plaque and food between your teeth where a toothbrush can't reach, helping prevent cavities and gum disease.
+          <div class="question">Why is flossing important?</div>
+          Flossing removes plaque and food particles between your teeth where a toothbrush can't reach, helping prevent cavities and gum disease.
         </li>
 
         <li>
-          <div class="question"><font-awesome-icon icon="fa-solid fa-glass-water-droplet" class="icon" /> Is mouthwash necessary?</div>
+          <div class="question">Is mouthwash necessary?</div>
           Mouthwash can help reduce bacteria, freshen breath, and add fluoride protection.<br /> But it's not a substitute for brushing and flossing.
         </li>
 
         <li>
-          <div class="question"><font-awesome-icon icon="fa-solid fa-apple-whole" class="icon" /> What foods are good for my teeth?</div>
-          Crunchy fruits and vegetables, cheese, and foods rich in calcium strengthen teeth, while sugary snacks should be limited.
+          <div class="question">What foods are good for my teeth?</div>
+          Crunchy fruits and vegetables, cheese, and foods rich in calcium strengthen teeth.<br /> Try to limit sugary snacks.
         </li>
 
         <li>
-          <div class="question"><font-awesome-icon icon="fa-solid fa-smoking-ban" class="icon" /> How does smoking affect dental health?</div>
-          Smoking can cause gum disease, tooth loss, and serious oral health problems including oral cancer.<br /> Quitting greatly improves oral health.
+          <div class="question">How does smoking affect dental health?</div>
+          Smoking can cause gum disease, tooth loss, and oral health problems including oral cancer.<br /> Quitting smoking greatly improves your oral health.
         </li>
 
         <li>
-          <div class="question"><font-awesome-icon icon="fa-solid fa-child" class="icon" /> When should children first see a dentist?</div>
-          Children should visit a dentist by their first birthday or within six months of their first tooth erupting.
+          <div class="question">When should children first see a dentist?</div>
+          Children should visit a dentist by their first birthday or within six months after their first tooth erupts.
         </li>
       </ol>
     </div>
