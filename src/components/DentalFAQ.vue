@@ -8,7 +8,7 @@
           Brush your teeth twice a day for two minutes each time.<br />
           Use a timer to keep track!
           <div class="question"><font-awesome-icon icon="fa-solid fa-toothbrush" class="icon" /> How long and how often should I brush my teeth?</div>
-          Brush your teeth <strong>twice a day for two minutes</strong> each time. Use a timer to keep track!
+          Brush your teeth <strong>twice a day for two minutes</strong> each time.<br /> Use a timer to keep track!
         </li>
         
         <li>
@@ -16,7 +16,7 @@
           The ADA recommends a soft-bristled toothbrush with a small head.<br />
           Electric brushes are great for extra cleaning and easier handling.
           <div class="question"><font-awesome-icon icon="fa-solid fa-tooth" class="icon" /> What type of toothbrush should I use?</div>
-          The ADA recommends a <strong>soft-bristled toothbrush</strong> with a small head. Electric brushes are great for extra cleaning and easier handling.
+          The ADA recommends a <strong>soft-bristled toothbrush</strong> with a small head.<br /> Electric brushes are great for extra cleaning and easier handling.
         </li>
 
         <li>
@@ -24,17 +24,17 @@
           Choose toothpaste based on your needs — <em>cavity protection, sensitivity relief, or whitening</em>.<br />
           When in doubt, ask your dentist.
           <div class="question"><font-awesome-icon icon="fa-solid fa-pump-soap" class="icon" /> What toothpaste should I use?</div>
-          Choose toothpaste based on your needs—<em>cavity protection, sensitivity relief, or whitening</em>. When in doubt, ask your dentist.
+          Choose toothpaste based on your needs—<em>cavity protection, sensitivity relief, or whitening</em>.<br /> When in doubt, ask your dentist.
         </li>
 
         <li>
           <div class="question"><font-awesome-icon icon="fa-solid fa-triangle-exclamation" class="icon" /> Can I over brush my teeth?</div>
-          Yes! Brushing too hard can cause <strong>gum damage and enamel wear</strong>. Be gentle and let your brush do the work.
+          Yes! Brushing too hard can cause <strong>gum damage and enamel wear</strong>.<br /> Be gentle and let your brush do the work.
         </li>
 
         <li>
           <div class="question"><font-awesome-icon icon="fa-solid fa-recycle" class="icon" /> How often should I replace my toothbrush?</div>
-          Every 3–4 months, or sooner if the bristles are worn. And always replace after an illness to prevent reinfection.
+          Every 3–4 months, or sooner if the bristles are worn.<br /> Always replace after an illness to prevent reinfection.
         </li>
 
         <li>
@@ -44,7 +44,7 @@
 
         <li>
           <div class="question"><font-awesome-icon icon="fa-solid fa-glass-water-droplet" class="icon" /> Is mouthwash necessary?</div>
-          Mouthwash can help reduce bacteria, freshen breath, and add fluoride protection — but it's not a substitute for brushing and flossing.
+          Mouthwash can help reduce bacteria, freshen breath, and add fluoride protection.<br /> But it's not a substitute for brushing and flossing.
         </li>
 
         <li>
@@ -54,7 +54,7 @@
 
         <li>
           <div class="question"><font-awesome-icon icon="fa-solid fa-smoking-ban" class="icon" /> How does smoking affect dental health?</div>
-          Smoking can cause gum disease, tooth loss, and serious oral health problems including oral cancer. Quitting greatly improves oral health.
+          Smoking can cause gum disease, tooth loss, and serious oral health problems including oral cancer.<br /> Quitting greatly improves oral health.
         </li>
 
         <li>
