@@ -1,17 +1,30 @@
 <template>
   <div class="tutorial-page">
-    <h1><font-awesome-icon icon="fa-solid fa-graduation-cap" class="icon" /> Tutorials</h1>
+    <h1>
+      <font-awesome-icon :icon="['fas', 'graduation-cap']" class="icon" />
+      Tutorials
+    </h1>
 
-    <section class="tutorial-section" v-for="tutorial in tutorials" :key="tutorial.title">
-      <h3>{{ tutorial.title }}</h3>
-      <p>{{ tutorial.description }}</p>
-      <a :href="tutorial.link" target="_blank" class="tutorial-link">🎥 Watch Tutorial</a>
-    </section>
+    <div class="tutorial-grid">
+      <a 
+        v-for="(tutorial, index) in tutorials" 
+        :key="index"
+        :href="tutorial.link" 
+        target="_blank"
+        rel="noopener noreferrer" 
+        class="tutorial-card"
+      >
+        <h3>{{ tutorial.title }}</h3>
+        <p>{{ tutorial.description }}</p>
+        <div class="tutorial-link">
+          🎥 Watch Tutorial
+        </div>
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
-// FontAwesome import if needed
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 export default {
@@ -85,7 +98,7 @@ export default {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   margin: 2rem auto;
-  max-width: 1000px;
+  max-width: 1200px;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -97,50 +110,70 @@ h1 {
   font-weight: 800;
 }
 
-.tutorial-section {
-  background-color: #f1f8ff;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-left: 6px solid #00cec9;
-  border-radius: 8px;
+.icon {
+  margin-right: 0.5rem;
+  color: #00b894;
 }
 
-.tutorial-section h3 {
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.tutorial-card {
+  background-color: #f1f8ff;
+  border-radius: 8px;
+  border: 1px solid #dfe6e9;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.tutorial-card h3 {
   font-size: 1.4rem;
   font-weight: 700;
   color: #2d3436;
   margin-bottom: 0.8rem;
 }
 
-.tutorial-section p {
+.tutorial-card p {
+  flex-grow: 1;
   font-size: 1.05rem;
   color: #555;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .tutorial-link {
   font-weight: bold;
   color: #42b983;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .tutorial-link:hover {
   text-decoration: underline;
 }
 
-.icon {
-  margin-right: 0.5rem;
-  color: #00b894;
+@media (max-width: 1024px) {
+  .tutorial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .tutorial-page {
-    padding: 1.5rem;
-  }
-  
-  h1 {
-    font-size: 1.8rem;
+@media (max-width: 600px) {
+  .tutorial-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
