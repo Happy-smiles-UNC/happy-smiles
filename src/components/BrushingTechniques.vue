@@ -150,11 +150,8 @@ h3 {
 }
 
 h4 {
-  font-size: 1.25rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
-
 .brushing-steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
