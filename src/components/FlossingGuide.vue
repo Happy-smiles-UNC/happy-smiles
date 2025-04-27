@@ -86,15 +86,18 @@ export default {
 
 h2 {
   color: #42b983;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
   text-align: center;
+  font-weight: 800;
 }
 
 h3 {
   color: #42b983;
+  font-size: 1.75rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
+  font-weight: 700;
 }
 
 .placeholder-text {

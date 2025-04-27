@@ -434,6 +434,7 @@ h3 {
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  color: #333;
 }
 
 .map-container {

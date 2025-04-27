@@ -43,8 +43,10 @@ export default {
 
 h2 {
   color: #42b983;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
   text-align: center;
+  font-weight: 800;
 }
 
 .tips-list {

@@ -19,17 +19,17 @@
     </div>
 
     <h4>Time Allocation:</h4>
-    <p class="placeholder-text">
+    <p>
       Divide your mouth into four quadrants: upper left, upper right, lower left, and lower right. Spend at least 30 seconds brushing each quadrant, ensuring thorough cleaning for a total of 2 minutes.
     </p>
 
     <h4>Frequency of Brushing:</h4>
-    <p class="placeholder-text">
+    <p>
       Brush at least twice a day, ideally in the morning and before bedtime, to maintain optimal oral hygiene.
     </p>
 
     <h4>Toothbrush Maintenance:</h4>
-    <p class="placeholder-text">
+    <p>
       Replace your toothbrush or toothbrush head every 3 months, or sooner if the bristles become frayed. Regular replacement ensures your brush is effective in cleaning your teeth and maintaining oral health.
     </p>
 
@@ -138,8 +138,9 @@ export default {
 
 h2 {
   color: #42b983;
-  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
   text-align: center;
+  font-weight: 800;
 }
 
 h3 {
@@ -147,11 +148,13 @@ h3 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   text-align: center;
+  font-weight: 700;
 }
 
 h4 {
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .brushing-steps-grid {
@@ -164,6 +167,14 @@ h4 {
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .brushing-steps-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem; /* smaller gap on mobile */
+  }
 }
 
 .brushing-step {
@@ -189,12 +200,6 @@ h4 {
   margin-top: 0.75rem;
   font-size: 1rem;
   color: #444;
-}
-
-.placeholder-text {
-  padding: 1rem;
-  line-height: 1.6;
-  color: #333;
 }
 
 img {

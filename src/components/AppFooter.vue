@@ -95,7 +95,6 @@ export default {
   color: #00b894;
   margin-bottom: 1rem;
   font-size: 1.4rem;
-  font-family: 'Baloo 2', cursive;
 }
 
 .footer-links {
